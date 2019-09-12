@@ -1,0 +1,55 @@
+@import '../node_modules/bulma/bulma.sass';
+/* Color Theme Swatches in Hex */
+$red_color: #D93250;
+$purple_color: #38208C;
+$light_purple: lighten($purple_color, 10%);
+$darker_purple: darken($purple_color, 10%);
+$blue_color: #0AA6A6;
+$yellow_color: #F2B90F;
+$orange_color: #F2790F;
+$content_background: #1A1B41;
+$white: #E8E8EC;
+
+.miniseo {
+
+  max-width: 500px;
+  min-width: 500px;
+  max-height: 600px;
+  min-height: 600px;
+  overflow: hidden;
+  box-shadow: 0 0 3px $purple_color;
+  border-radius: 0 0 10px 10px;
+  background: $content_background;
+
+  .app-navbar {
+    background: $purple_color;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $light_purple, $purple_color, $darker_purple);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $light_purple, $purple_color, $darker_purple); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: .3rem;
+    justify-content: space-between;
+    border-bottom: 1px solid $white;
+
+    .navbar-item {
+      width: 500px;
+    }
+
+    img {
+      max-height: unset;
+      position: absolute;
+
+      &.icon {
+        height: 80px;
+        width: 75px;
+      }
+
+      &.text-icon {
+        right: 150px;
+      }
+    }
+  }
+
+  .main-section {
+    padding-top: 2rem;
+    color: $white;
+  }
+}
