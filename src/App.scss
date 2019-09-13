@@ -1,4 +1,6 @@
 @import '../node_modules/bulma/bulma.sass';
+@import './assets/scss/icons';
+
 /* Color Theme Swatches in Hex */
 $red_color: #D93250;
 $purple_color: #38208C;
@@ -28,6 +30,7 @@ $white: #E8E8EC;
     padding: .3rem;
     justify-content: space-between;
     border-bottom: 1px solid $white;
+    overflow: hidden;
 
     .navbar-item {
       width: 500px;
@@ -51,5 +54,9 @@ $white: #E8E8EC;
   .main-section {
     padding-top: 2rem;
     color: $white;
+  }
+
+  .switcher {
+    margin-top: 15px;
   }
 }
