@@ -59,4 +59,24 @@ $white: #E8E8EC;
   .switcher {
     margin-top: 15px;
   }
+
+  .card {
+    color: $white;
+
+    &.red {
+      background: $red_color;
+    }
+
+    &.orange {
+      background: $orange_color;
+    }
+
+    &.yellow {
+      background: $yellow_color;
+    }
+
+    &.blue {
+      background: $blue_color;
+    }
+  }
 }
