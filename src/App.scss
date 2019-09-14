@@ -3,12 +3,13 @@
 
 /* Color Theme Swatches in Hex */
 $red_color: #D93250;
+$green_color: #6AB187;
 $purple_color: #38208C;
 $light_purple: lighten($purple_color, 10%);
 $darker_purple: darken($purple_color, 10%);
-$blue_color: #0AA6A6;
-$yellow_color: #F2B90F;
-$orange_color: #F2790F;
+$blue_color: #20948B;
+$yellow_color: #F4CC70;
+$orange_color: #DE7A22;
 $content_background: #1A1B41;
 $white: #E8E8EC;
 
@@ -60,23 +61,71 @@ $white: #E8E8EC;
     margin-top: 15px;
   }
 
+  .scrollable {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 380px;
+    padding-right: 5px;
+  }
+
   .card {
     color: $white;
 
-    &.red {
-      background: $red_color;
+    &.green {
+      background: $green_color;
+
+      .card-header {
+        background: darken($green_color, 3);
+
+        .card-header-title {
+          justify-content: center;
+          color: $white;
+          font-weight: bold;
+        }
+      }
     }
 
     &.orange {
       background: $orange_color;
+
+      .card-header {
+        background: darken($orange_color, 3);
+
+        .card-header-title {
+          justify-content: center;
+          color: $white;
+          font-weight: bold;
+        }
+      }
     }
 
     &.yellow {
       background: $yellow_color;
+      color: darken($white, 50);
+
+      .card-header {
+        background: darken($yellow_color, 3);
+
+        .card-header-title {
+          justify-content: center;
+          color: darken($white, 50);
+          font-weight: bold;
+        }
+      }
     }
 
     &.blue {
       background: $blue_color;
+
+      .card-header {
+        background: darken($blue_color, 3);
+
+        .card-header-title {
+          justify-content: center;
+          color: $white;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
