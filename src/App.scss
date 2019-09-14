@@ -24,6 +24,7 @@
 
     .navbar-item {
       width: 500px;
+      justify-content: center;
     }
 
     img {
@@ -33,10 +34,6 @@
       &.icon {
         height: 80px;
         width: 75px;
-      }
-
-      &.text-icon {
-        right: 150px;
       }
     }
   }

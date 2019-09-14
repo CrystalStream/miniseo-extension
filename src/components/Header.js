@@ -8,7 +8,7 @@ export default function Header(prpos) {
     <nav className="navbar app-navbar is-flex" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
-          <img src={Logo} alt="Scrap sites" className="icon" />
+          {/* <img src={Logo} alt="Scrap sites" className="icon" /> */}
           <img src={TextLogo} alt="Scrap sites" className="text-icon"  />
         </a>
       </div>
