@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.scss'
 
-import SeoChecker from './components/SeoChecker'
+import SeoChecker from './containers/SeoChecker'
 import Header from './components/Header'
 
 function App() {

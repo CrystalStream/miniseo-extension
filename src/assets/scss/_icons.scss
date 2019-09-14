@@ -25,9 +25,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-alert-triangle:before {
+  content: "\e902";
+  color: $red_color;
+}
 .icon-bar-chart:before {
   content: "\e900";
 }
+.icon-check-square:before {
+  content: "\e903";
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 20px;
+}
 .icon-grid:before {
   content: "\e901";
+}
+.icon-x-square:before {
+  content: "\e904";
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 20px;
 }

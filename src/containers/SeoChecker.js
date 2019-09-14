@@ -1,8 +1,8 @@
 import React from 'react'
 
-import SearchInput from './SearchInput'
-import Switcher from './Switcher'
-import DataViewer from './DataViewer'
+import SearchInput from '../components/SearchInput'
+import Switcher from '../components/Switcher'
+import DataViewer from '../components/DataViewer'
 
 export default function SeoChecker(props) {
 

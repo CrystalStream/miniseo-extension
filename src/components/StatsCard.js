@@ -10,6 +10,12 @@ export default function StatsCard(props) {
             <p className="card-header-title">
               Component
             </p>
+            {/* <span className="card-header-icon">
+              <span className="icon">
+                <span className="icon-check-square"></span>
+                <span className="icon-x-square"></span>
+              </span>
+            </span> */}
           </header>
           <div className="card-content">
             <div className="content">

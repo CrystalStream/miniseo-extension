@@ -1,17 +1,6 @@
 @import '../node_modules/bulma/bulma.sass';
+@import './assets/scss/variables';
 @import './assets/scss/icons';
-
-/* Color Theme Swatches in Hex */
-$red_color: #D93250;
-$green_color: #6AB187;
-$purple_color: #38208C;
-$light_purple: lighten($purple_color, 10%);
-$darker_purple: darken($purple_color, 10%);
-$blue_color: #20948B;
-$yellow_color: #F4CC70;
-$orange_color: #DE7A22;
-$content_background: #1A1B41;
-$white: #E8E8EC;
 
 .miniseo {
 
@@ -53,7 +42,7 @@ $white: #E8E8EC;
   }
 
   .main-section {
-    padding-top: 2rem;
+    padding-top: 1rem;
     color: $white;
   }
 
@@ -70,6 +59,10 @@ $white: #E8E8EC;
 
   .card {
     color: $white;
+
+    .card-header-icon {
+      cursor: unset;
+    }
 
     &.green {
       background: $green_color;
