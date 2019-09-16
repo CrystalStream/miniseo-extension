@@ -15,22 +15,20 @@ export default function StatsCard(props) {
           <div className="card-content">
             <div className="content">
               <div className="score has-text-centered">
-                <p>10 / 10</p>
+                <p>{ metric.points.passed } / { metric.points.total }</p>
               </div>
               <table className="table">
                 <tbody>
-                  <tr>
-                    <th>Tag</th>
-                    <td>Values</td>
-                  </tr>
-                  <tr>
-                    <th>Tag</th>
-                    <td>Values</td>
-                  </tr>
-                  <tr>
-                    <th>Tag</th>
-                    <td>Values</td>
-                  </tr>
+                  {
+                    Object.keys(metric.values).map(k => (
+                      <tr key={k}>
+                        <th>{k}</th>
+                        <td>
+                          <p>{metric.values[k]}</p>
+                        </td>
+                      </tr>
+                    ))
+                  }
                 </tbody>
               </table>
             </div>
