@@ -1,7 +1,7 @@
 import React from 'react'
 
-import SeoGrid from './SeoGrid'
-import SeoChart from './SeoChart'
+import SeoGrid from './ui/SeoGrid'
+import SeoChart from './ui/SeoChart'
 
 export default function SeoChecker(props) {
 

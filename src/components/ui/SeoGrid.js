@@ -1,7 +1,7 @@
 import React from 'react'
 
 import StatsCard from './StatsCard'
-import utils from '../utils'
+import utils from '../../utils'
 
 export default function SeoGrid(props) {
   const { metrics } = props
