@@ -1,36 +1,42 @@
 import React from 'react'
-import { Doughnut } from 'react-chartjs-2'
+import { RadialBarChart, RadialBar, Legend } from 'recharts';
 
 export default function SeoChart(props) {
 
-  const chartData = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)'
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)'
-      ],
-      borderWidth: 1
-    }]
+  const chartData = [
+    {
+      name: '18-24', uv: 31.47, pv: 2400, fill: '#8884d8',
+    },
+    {
+      name: '25-29', uv: 26.69, pv: 4567, fill: '#83a6ed',
+    },
+    {
+      name: '30-34', uv: 15.69, pv: 1398, fill: '#8dd1e1',
+    },
+    {
+      name: '35-39', uv: 8.22, pv: 9800, fill: '#82ca9d',
+    },
+    {
+      name: '40-49', uv: 8.63, pv: 3908, fill: '#a4de6c',
+    },
+    {
+      name: '50+', uv: 2.63, pv: 4800, fill: '#d0ed57',
+    },
+    {
+      name: 'unknow', uv: 6.67, pv: 4800, fill: '#ffc658',
+    },
+  ]
+
+  const style = {
+    top: 0,
+    left: 350,
+    lineHeight: '24px',
   }
 
   return (
-    <Doughnut
-      data={chartData}
-    />
+    <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={chartData}>
+        <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
+        <Legend iconSize={20} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+      </RadialBarChart>
   )
 }
