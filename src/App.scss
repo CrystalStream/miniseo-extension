@@ -61,6 +61,20 @@
       cursor: unset;
     }
 
+    .score {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    table {
+      background: transparent;
+      margin-top: 10px;
+
+      td, th{
+        border-color: darken($white, 17);
+      }
+    }
+
     &.green {
       background: $green_color;
 

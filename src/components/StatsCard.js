@@ -19,7 +19,25 @@ export default function StatsCard(props) {
           </header>
           <div className="card-content">
             <div className="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              <div className="score has-text-centered">
+                <p>10 / 10</p>
+              </div>
+              <table className="table">
+                <tbody>
+                  <tr>
+                    <th>Tag</th>
+                    <td>Values</td>
+                  </tr>
+                  <tr>
+                    <th>Tag</th>
+                    <td>Values</td>
+                  </tr>
+                  <tr>
+                    <th>Tag</th>
+                    <td>Values</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
