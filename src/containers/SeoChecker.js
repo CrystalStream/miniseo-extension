@@ -6,13 +6,25 @@ import DataViewer from '../components/DataViewer'
 
 export default function SeoChecker(props) {
 
-  const [gridView, toggleView] = useState(true)
+  const [ gridView, toggleView ] = useState(true)
+  const [ seoData, setSeoData ] = useState({})
+  const [ loading, setLoading ] = useState(false)
 
   return (
     <div>
-      <SearchInput />
-      <Switcher onToggleView={toggleView} isGridView={gridView}/>
-      <DataViewer gridView={gridView}/>
+      <SearchInput
+        loading={loading}
+        onLoading={setLoading}
+        onSetData={setSeoData}
+      />
+      <Switcher
+        onToggleView={toggleView}
+        isGridView={gridView}
+      />
+      <DataViewer
+        data={seoData}
+        gridView={gridView}
+      />
     </div>
   )
 }

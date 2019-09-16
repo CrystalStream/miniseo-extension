@@ -87,6 +87,12 @@
           font-weight: bold;
         }
       }
+
+      .card-content {
+        table, th {
+          color: $white;
+        }
+      }
     }
 
     &.orange {
@@ -99,6 +105,31 @@
           justify-content: center;
           color: $white;
           font-weight: bold;
+        }
+      }
+      .card-content {
+        table, th {
+          color: $white;
+        }
+      }
+    }
+
+    &.gray {
+      background: $gray_color;
+
+      .card-header {
+        background: darken($gray_color, 3);
+
+        .card-header-title {
+          justify-content: center;
+          color: $white;
+          font-weight: bold;
+        }
+      }
+
+      .card-content {
+        table, th {
+          color: $white;
         }
       }
     }
@@ -128,6 +159,12 @@
           justify-content: center;
           color: $white;
           font-weight: bold;
+        }
+      }
+
+      .card-content {
+        table, th {
+          color: $white;
         }
       }
     }

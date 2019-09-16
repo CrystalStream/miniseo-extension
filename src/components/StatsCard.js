@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function StatsCard(props) {
+  const { metric } = props
 
   return (
     <div className="columns">
@@ -8,14 +9,8 @@ export default function StatsCard(props) {
         <div className={`card ${props.color}`}>
           <header className="card-header">
             <p className="card-header-title">
-              Component
+              { metric.display_name }
             </p>
-            {/* <span className="card-header-icon">
-              <span className="icon">
-                <span className="icon-check-square"></span>
-                <span className="icon-x-square"></span>
-              </span>
-            </span> */}
           </header>
           <div className="card-content">
             <div className="content">

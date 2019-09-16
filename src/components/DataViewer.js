@@ -1,6 +1,6 @@
 import React from 'react'
 
-import StatsCard from './StatsCard'
+import SeoGrid from './SeoGrid'
 import SeoChart from './SeoChart'
 
 export default function SeoChecker(props) {
@@ -9,12 +9,7 @@ export default function SeoChecker(props) {
     <>
 
     {
-      props.gridView ? (<div className="scrollable">
-        <StatsCard color="green" />
-        <StatsCard color="orange" />
-        <StatsCard color="yellow "/>
-        <StatsCard color="blue" />
-      </div>) : <SeoChart />
+      props.gridView ? <SeoGrid metrics={props.data} /> : <SeoChart />
     }
     </>
   )
