@@ -42,6 +42,7 @@ export default function SearchInput(props) {
             value={url}
             disabled={loading}
             onChange={e => setUrl(e.target.value)}
+            autoFocus
             />
           {!validUrl && (<span className="icon is-small is-right">
             <span className="icon-alert-triangle"></span>
