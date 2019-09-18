@@ -22,7 +22,7 @@ export default function SeoChecker(props) {
         isGridView={gridView}
       />
       <DataViewer
-        data={seoData}
+        data={seoData || {}}
         gridView={gridView}
       />
     </div>

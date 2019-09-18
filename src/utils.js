@@ -1,9 +1,24 @@
 const COLORS = {
-  head: 'green',
-  links: 'orange',
-  og_tags: 'yellow',
-  headers_tags: 'blue',
-  images: 'gray',
+  head: {
+    name: 'green',
+    code: '#6AB187'
+  },
+  links: {
+    name: 'orange',
+    code: '#DE7A22'
+  },
+  og_tags: {
+    name: 'yellow',
+    code: '#F4CC70'
+  },
+  headers_tags: {
+    name: 'blue',
+    code: '#20948B'
+  },
+  images: {
+    name: 'gray',
+    code: '#465362'
+  },
 }
 function scrapSite(url) {
   return fetch(`http://localhost:5000/seo?url=${url}`, {
@@ -17,10 +32,16 @@ function scrapSite(url) {
 }
 
 function getBackgroundColor(metric) {
-  return COLORS[metric]
+  return COLORS[metric].name
+}
+
+function getColorCode(metric) {
+  return COLORS[metric].code
+
 }
 
 export default {
   scrapSite,
-  getBackgroundColor
+  getBackgroundColor,
+  getColorCode
 }

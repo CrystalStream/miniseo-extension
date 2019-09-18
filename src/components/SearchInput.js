@@ -25,8 +25,6 @@ export default function SearchInput(props) {
     } else {
       onSetData(res.data.metrics)
     }
-    // once the request is sent, update state again
-    // setLoading(false)
 
   }, [url])
 
