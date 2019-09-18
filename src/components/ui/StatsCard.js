@@ -24,7 +24,11 @@ export default function StatsCard(props) {
                       <tr key={k}>
                         <th>{k}</th>
                         <td>
-                          <p>{metric.values[k]}</p>
+                          {
+                            k === "og:image" ?
+                              <img src={metric.values[k]} alt={k} width="150" /> :
+                              <p>{metric.values[k]}</p>
+                          }
                         </td>
                       </tr>
                     ))
