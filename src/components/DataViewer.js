@@ -17,14 +17,10 @@ export default function SeoChecker(props) {
     return null
   }).filter(Boolean)
 
-  console.log('before chartData', chartData)
   chartData = chartData.reduce((acc, cv) => {
-    console.log('acc', acc)
-    console.log('cv', cv)
     acc.push(...cv)
     return acc
   }, [])
-  console.log('chartData', chartData)
 
   return (
     <>
