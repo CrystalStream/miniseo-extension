@@ -1,7 +1,12 @@
 import React from 'react'
+import NotFound from '../../assets/img/404.png'
 
 export default function StatsCard(props) {
   const { metric } = props
+
+  function defaultNotFound(ev) {
+    ev.target.src = NotFound
+  }
 
   return (
     <div className="columns">
@@ -25,8 +30,8 @@ export default function StatsCard(props) {
                         <th>{k}</th>
                         <td>
                           {
-                            k === "og:image" ?
-                              <img src={metric.values[k]} alt={k} width="150" /> :
+                            k === "og:image" || metric.display_name.toLowerCase() === 'images' ?
+                              <img src={metric.values[k]} onError={defaultNotFound} alt={k} width="150" /> :
                               <p>{metric.values[k]}</p>
                           }
                         </td>

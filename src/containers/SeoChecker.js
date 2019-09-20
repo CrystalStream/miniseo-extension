@@ -17,14 +17,20 @@ export default function SeoChecker(props) {
         onLoading={setLoading}
         onSetData={setSeoData}
       />
-      <Switcher
-        onToggleView={toggleView}
-        isGridView={gridView}
-      />
-      <DataViewer
-        data={seoData || {}}
-        gridView={gridView}
-      />
+      {
+        Object.keys(seoData).length > 0 && (
+          <>
+            <Switcher
+              onToggleView={toggleView}
+              isGridView={gridView}
+            />
+            <DataViewer
+              data={seoData || {}}
+              gridView={gridView}
+            />
+          </>
+        )
+      }
     </div>
   )
 }

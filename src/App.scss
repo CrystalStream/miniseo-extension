@@ -7,11 +7,16 @@
   max-width: 500px;
   min-width: 500px;
   max-height: 600px;
-  min-height: 600px;
+  // min-height: 600px;
   overflow: hidden;
   box-shadow: 0 0 3px $purple_color;
   border-radius: 0 0 10px 10px;
   background: $content_background;
+  transition: height 0.3s ease-in;
+
+  .container {
+   border-radius: 0 0 10px 10px;
+  }
 
   .app-navbar {
     background: $purple_color;  /* fallback for old browsers */
@@ -39,8 +44,16 @@
   }
 
   .main-section {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     color: $white;
+
+
+    .recharts-wrapper {
+
+      text, tspan {
+        color: #fff;
+      }
+    }
   }
 
   .switcher {
