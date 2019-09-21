@@ -4,6 +4,8 @@
 
 .miniseo {
 
+  font-family: 'Rajdhani', sans-serif;
+
   max-width: 500px;
   min-width: 500px;
   max-height: 600px;
@@ -50,8 +52,36 @@
 
     .recharts-wrapper {
 
-      text, tspan {
-        color: #fff;
+      tspan {
+        fill: $white;
+        font-size: 12px;
+      }
+
+      .recharts-tooltip-wrapper {
+
+        .recharts-tooltip-item {
+          span {
+            color: $gray_color;
+          }
+        }
+
+        .recharts-tooltip-label {
+          display: none;
+        }
+      }
+    }
+
+    .chart-container {
+      margin-top: 1rem;
+      text-align: center;
+
+      .progress {
+        margin-bottom: 50px;
+      }
+
+      .points {
+        font-size: 30px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -70,6 +100,11 @@
   .card {
     color: $white;
 
+    .card-header-title {
+      font-size: 25px;
+      font-weight: 600;
+    }
+
     .card-header-icon {
       cursor: unset;
     }
@@ -87,9 +122,11 @@
       td, th{
         border-color: darken($white, 17);
         max-width: 260px;
+        font-size: 20px;
 
         p {
           word-wrap: break-word;
+          font-size: 17px;
         }
       }
     }

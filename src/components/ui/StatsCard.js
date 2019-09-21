@@ -20,7 +20,7 @@ export default function StatsCard(props) {
           <div className="card-content">
             <div className="content">
               <div className="score has-text-centered">
-                <p>{ metric.points.passed } / { metric.points.total }</p>
+                <p>{ metric.points.passed } of { metric.points.total } points</p>
               </div>
               <table className="table">
                 <tbody>
